@@ -1,0 +1,13 @@
+{
+  "name": "prefs-memory-marketplace",
+  "plugins": [
+    {
+      "name": "prefs-memory",
+      "source": "./",
+      "version": "0.1.0",
+      "description": "Persistent, structured user preferences for every ZCode session. Prefs live in a 0600 JSON file (~/.zcode/prefs-memory.json) managed by a stdlib CLI (set/get/list/remove/export); a SessionStart hook injects the compact pref block at session start. Similar prefs dedupe on write; the store caps at 50.",
+      "displayName": "Prefs Memory",
+      "category": "productivity"
+    }
+  ]
+}

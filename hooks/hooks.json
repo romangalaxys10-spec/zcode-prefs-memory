@@ -1,0 +1,19 @@
+{
+  "description": "prefs-memory: SessionStart hook injects the stored user preferences as compact markdown additionalContext by running the stdlib export subcommand.",
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|clear|compact",
+        "hooks": [
+          {
+            "type": "process",
+            "command": "python3",
+            "args": ["${CLAUDE_PLUGIN_ROOT}/skills/prefs-memory/scripts/prefs.py", "export"],
+            "timeoutMs": 10000,
+            "statusMessage": "prefs-memory: loading user preferences..."
+          }
+        ]
+      }
+    ]
+  }
+}

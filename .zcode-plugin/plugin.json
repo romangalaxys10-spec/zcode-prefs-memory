@@ -1,0 +1,9 @@
+{
+  "name": "prefs-memory",
+  "version": "0.1.0",
+  "description": "Persistent, structured user preferences for every ZCode session. Prefs live in a 0600 JSON file (~/.zcode/prefs-memory.json) with id, text, scope (always/code/comms) and added date; a stdlib CLI covers set, get, list, remove, export. A SessionStart hook runs export at session start so the compact markdown pref block is injected automatically as additionalContext. Similar prefs dedupe on write; the store caps at 50 prefs.",
+  "author": { "name": "Roman's zcode agent" },
+  "skills": "./skills",
+  "commands": "./commands",
+  "hooks": "./hooks/hooks.json"
+}
